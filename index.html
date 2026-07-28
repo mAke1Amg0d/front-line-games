@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta
+      name="description"
+      content="Front Line Games makes playful Roblox experiences built to be shared. Pick a game, find your squad, and hold the perimeter."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Front Line Games — Hold the Perimeter" />
+    <meta
+      property="og:description"
+      content="Nine Roblox experiences. One front line. Pick a sector and play."
+    />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Front Line Games — Hold the Perimeter" />
+    <meta
+      name="twitter:description"
+      content="Nine Roblox experiences. One front line. Pick a sector and play."
+    />
+    <meta name="twitter:image" content="/og.png" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://tr.rbxcdn.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Front Line Games — Hold the Perimeter</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-scan" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Front Line Games, home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span class="brand-name">FRONT LINE</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#games">Games</a>
+        <a href="#doctrine">Studio</a>
+        <a href="#community">Community</a>
+      </nav>
+
+      <a
+        class="header-cta"
+        href="https://discord.gg/ZdnGSwczs"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Join the line
+        <span aria-hidden="true">↗</span>
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-button
+      >
+        <span></span><span></span>
+      </button>
+
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" data-mobile-menu>
+        <a href="#games">Games</a>
+        <a href="#doctrine">Studio</a>
+        <a href="#community">Community</a>
+        <a href="https://discord.gg/ZdnGSwczs" target="_blank" rel="noreferrer">Join Discord ↗</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="radar radar-one" aria-hidden="true"></div>
+        <div class="radar radar-two" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="status-dot"></span>
+            Independent Roblox Studio · Signal 09/09
+          </p>
+          <h1 class="hero-title reveal" id="hero-title">
+            <span>HOLD THE</span>
+            <span class="outline">PERIMETER.</span>
+          </h1>
+          <div class="hero-bottom reveal">
+            <p>
+              Small team. Big play energy. We build worlds that turn strangers
+              into squads and one more round into an entire night.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#games">
+                Enter the field
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a
+                class="button button-ghost"
+                href="https://www.roblox.com/communities/246804689"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Roblox group
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Selected Front Line Games artwork">
+          <div class="target-lock" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="hero-cards" data-hero-cards></div>
+          <div class="visual-caption">
+            <span>LIVE FEED / SECTOR A</span>
+            <span data-local-time>00:00:00 UTC</span>
+          </div>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span>Scroll to deploy</span>
+          <i></i>
+        </div>
+      </section>
+
+      <div class="signal-strip" aria-hidden="true">
+        <div class="signal-track">
+          <span>PLAY TOGETHER</span><i>✦</i>
+          <span>BUILD THE LINE</span><i>✦</i>
+          <span>DEFEND THE FUN</span><i>✦</i>
+          <span>PLAY TOGETHER</span><i>✦</i>
+          <span>BUILD THE LINE</span><i>✦</i>
+          <span>DEFEND THE FUN</span><i>✦</i>
+        </div>
+      </div>
+
+      <section class="games-section section-shell" id="games" aria-labelledby="games-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Active deployments</p>
+            <h2 id="games-title">Choose your sector.</h2>
+          </div>
+          <p class="section-intro">
+            Nine worlds, four kinds of chaos. Every deployment opens directly
+            in Roblox.
+          </p>
+        </div>
+
+        <div class="game-toolbar reveal">
+          <div class="filter-list" role="group" aria-label="Filter games" data-filters></div>
+          <p class="game-count" aria-live="polite">
+            Showing <strong data-game-count>09</strong> deployments
+          </p>
+        </div>
+
+        <div class="games-grid" data-games-grid></div>
+
+        <div class="future-game reveal">
+          <div>
+            <span class="future-index">10+</span>
+            <p class="eyebrow">The line keeps moving</p>
+            <h3>Next sector loading.</h3>
+          </div>
+          <p>
+            New games slot into this field automatically. Follow the community
+            for playtests, first looks, and launch signals.
+          </p>
+          <a href="https://discord.gg/ZdnGSwczs" target="_blank" rel="noreferrer">
+            Get launch alerts
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Studio facts">
+        <div class="metric reveal">
+          <strong data-total-games>09</strong>
+          <span>Games deployed</span>
+        </div>
+        <div class="metric reveal">
+          <strong>04</strong>
+          <span>Front types</span>
+        </div>
+        <div class="metric reveal">
+          <strong>01</strong>
+          <span>Independent studio</span>
+        </div>
+        <div class="metric reveal">
+          <strong>∞</strong>
+          <span>Rounds left to play</span>
+        </div>
+      </section>
+
+      <section class="doctrine section-shell" id="doctrine" aria-labelledby="doctrine-title">
+        <div class="doctrine-copy reveal">
+          <p class="eyebrow">Our doctrine</p>
+          <h2 id="doctrine-title">Games are better when the lobby becomes a squad.</h2>
+          <p>
+            Front Line Games builds easy-to-enter Roblox experiences around
+            collection, progression, friendly competition, and shared wins.
+            Every world has a clear fantasy. Every session gives you a story
+            worth bringing back to the community.
+          </p>
+          <a class="text-link" href="#community">
+            Meet the community
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="perimeter-map reveal" aria-label="Front Line Games creative principles">
+          <div class="map-grid" aria-hidden="true"></div>
+          <div class="map-orbit orbit-one" aria-hidden="true"></div>
+          <div class="map-orbit orbit-two" aria-hidden="true"></div>
+          <div class="map-core">
+            <span>FLG</span>
+            <small>HQ</small>
+          </div>
+          <div class="map-node node-a"><i></i><span>PLAY</span></div>
+          <div class="map-node node-b"><i></i><span>COLLECT</span></div>
+          <div class="map-node node-c"><i></i><span>COMPETE</span></div>
+          <div class="map-node node-d"><i></i><span>CONNECT</span></div>
+          <div class="map-readout">PERIMETER STABLE // COMMUNITY ONLINE</div>
+        </div>
+
+        <div class="principles">
+          <article class="principle reveal">
+            <span>01</span>
+            <h3>Instant fantasy</h3>
+            <p>Understand the fun in seconds. Discover the depth over hours.</p>
+          </article>
+          <article class="principle reveal">
+            <span>02</span>
+            <h3>Shared momentum</h3>
+            <p>Progress feels better when friends can see it, challenge it, and join it.</p>
+          </article>
+          <article class="principle reveal">
+            <span>03</span>
+            <h3>Live feedback</h3>
+            <p>Players help shape what ships next through tests, bug reports, and ideas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="community" id="community" aria-labelledby="community-title">
+        <div class="community-backdrop" aria-hidden="true"></div>
+        <div class="community-inner section-shell">
+          <div class="community-copy reveal">
+            <p class="eyebrow light">Community channel open</p>
+            <h2 id="community-title">Find your squad.<br />Run the line together.</h2>
+            <p>
+              Our Discord is the mission room: choose your game roles, find a
+              party, share feedback, report bugs, and catch events before they go live.
+            </p>
+            <a
+              class="button button-light"
+              href="https://discord.gg/ZdnGSwczs"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Join Front Line Discord
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <ol class="community-steps reveal">
+            <li>
+              <span>01</span>
+              <div>
+                <strong>Enter the server</strong>
+                <p>Use the invite and complete the quick welcome setup.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Pick your deployments</strong>
+                <p>Select the game roles you play to reveal the right channels.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Open Party Finder</strong>
+                <p>Post your game, time, and player count. Your next squad can answer there.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="closing section-shell" aria-labelledby="closing-title">
+        <div class="closing-mark reveal" aria-hidden="true">F</div>
+        <div class="closing-copy reveal">
+          <p class="eyebrow">End of transmission</p>
+          <h2 id="closing-title">Pick a world.<br />Bring your people.</h2>
+        </div>
+        <div class="closing-actions reveal">
+          <a class="button button-primary" href="#games">Browse all games <span>↑</span></a>
+          <a
+            class="button button-ghost dark"
+            href="https://www.roblox.com/communities/246804689"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Follow on Roblox <span>↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/logo-wide.png" alt="Front Line Games logo" loading="lazy" />
+        <div>
+          <strong>FRONT LINE GAMES</strong>
+          <p>Independent Roblox studio.</p>
+        </div>
+      </div>
+      <div class="footer-links" aria-label="Studio links">
+        <a href="https://github.com/mAke1Amg0d" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.instagram.com/thisismagzhan/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@makesaidadvance" target="_blank" rel="noreferrer">TikTok</a>
+        <a href="https://t.me/OneManArmySnappy" target="_blank" rel="noreferrer">Telegram</a>
+      </div>
+      <div class="footer-meta">
+        <p>© <span data-year></span> Front Line Games.</p>
+        <p>Not affiliated with Roblox Corporation.</p>
+      </div>
+    </footer>
+
+    <script src="games.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

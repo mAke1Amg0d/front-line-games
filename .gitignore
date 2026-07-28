@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.wrangler/
+.next/
+.openai/npm-cache/
+*.log
+.DS_Store
