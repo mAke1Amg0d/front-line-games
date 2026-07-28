@@ -5,7 +5,13 @@ const root = process.cwd();
 const out = join(root, "dist");
 const client = join(out, "client");
 const server = join(out, "server");
-const files = ["index.html", "styles.css", "games.js", "script.js", "favicon.svg"];
+const files = [
+  "index.html",
+  "styles.css",
+  "games.js",
+  "script.js",
+  "brand-icon.png",
+];
 const optionalFiles = ["og.png", "logo-wide.png"];
 const contentTypes = {
   ".html": "text/html; charset=utf-8",

@@ -15,6 +15,17 @@ test("the page includes essential navigation and calls to action", () => {
   assert.match(html, /id="community"/);
   assert.match(html, /https:\/\/discord\.gg\/ZdnGSwczs/);
   assert.match(html, /Skip to content/);
+  assert.match(html, /<span class="brand-name">FRONT LINE GAMES<\/span>/);
+  assert.match(html, /Front Line Games · Independent Roblox Studio/);
+});
+
+test("the signal strip uses two identical sequences for a seamless loop", () => {
+  const sequences = [
+    ...html.matchAll(/<div class="signal-sequence"[^>]*>([\s\S]*?)<\/div>/g),
+  ].map((match) => match[1].replace(/\s+/g, " ").trim());
+  assert.equal(sequences.length, 2);
+  assert.equal(sequences[0], sequences[1]);
+  assert.match(styles, /translate3d\(-50%, 0, 0\)/);
 });
 
 test("all nine games and direct Roblox URLs are present", () => {
@@ -49,6 +60,12 @@ test("the production worker serves the site and its social card", async () => {
   );
   assert.equal(socialCard.status, 200);
   assert.equal(socialCard.headers.get("content-type"), "image/png");
+
+  const brandIcon = await worker.fetch(
+    new Request("https://front-line-games.test/brand-icon.png"),
+  );
+  assert.equal(brandIcon.status, 200);
+  assert.equal(brandIcon.headers.get("content-type"), "image/png");
 
   const missing = await worker.fetch(
     new Request("https://front-line-games.test/not-found"),
