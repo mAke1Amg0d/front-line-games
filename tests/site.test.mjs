@@ -49,6 +49,19 @@ test("responsive and reduced-motion styles are defined", () => {
   assert.match(styles, /prefers-reduced-motion: reduce/);
 });
 
+test("studio and founder identities stay clearly separated", () => {
+  assert.match(html, /id="founder"/);
+  assert.match(html, /founder-magzhan\.webp/);
+  assert.match(html, /https:\/\/www\.instagram\.com\/thisismagzhan\//);
+  assert.match(html, /https:\/\/t\.me\/OneManArmySnappy/);
+  assert.match(html, /https:\/\/www\.instagram\.com\/frontlinegamesofficial\//);
+  assert.match(html, /https:\/\/t\.me\/frontlinegamesofficial/);
+  assert.match(html, /https:\/\/x\.com\/FrontLineGamesR/);
+
+  const footer = html.match(/<footer class="site-footer">([\s\S]*?)<\/footer>/)?.[1] || "";
+  assert.doesNotMatch(footer, /thisismagzhan|makesaidadvance|OneManArmySnappy/);
+});
+
 test("the production worker serves the site and its social card", async () => {
   const home = await worker.fetch(new Request("https://front-line-games.test/"));
   assert.equal(home.status, 200);
@@ -66,6 +79,12 @@ test("the production worker serves the site and its social card", async () => {
   );
   assert.equal(brandIcon.status, 200);
   assert.equal(brandIcon.headers.get("content-type"), "image/png");
+
+  const founderPortrait = await worker.fetch(
+    new Request("https://front-line-games.test/founder-magzhan.webp"),
+  );
+  assert.equal(founderPortrait.status, 200);
+  assert.equal(founderPortrait.headers.get("content-type"), "image/webp");
 
   const missing = await worker.fetch(
     new Request("https://front-line-games.test/not-found"),

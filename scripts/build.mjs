@@ -11,6 +11,7 @@ const files = [
   "games.js",
   "script.js",
   "brand-icon.png",
+  "founder-magzhan.webp",
 ];
 const optionalFiles = ["og.png", "logo-wide.png"];
 const contentTypes = {
@@ -19,6 +20,7 @@ const contentTypes = {
   ".js": "text/javascript; charset=utf-8",
   ".svg": "image/svg+xml",
   ".png": "image/png",
+  ".webp": "image/webp",
 };
 
 await rm(out, { recursive: true, force: true });
