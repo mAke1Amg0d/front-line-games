@@ -1543,6 +1543,12 @@ img {
   padding-left: 16px;
 }
 
+.founder-links a:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  padding-left: 0;
+  border-right: 0;
+}
+
 .founder-links a:hover {
   padding-right: 12px;
   padding-left: 12px;
