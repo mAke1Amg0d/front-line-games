@@ -111,4 +111,16 @@ window.FRONT_LINE_GAMES = [
     url: "https://www.roblox.com/games/139201277626845/Slime-Jumping",
     accent: "#79f18a",
   },
+  {
+    id: "merge-squishy-balls",
+    title: "Merge Squishy Balls [ASMR]",
+    category: "Merge & ASMR",
+    status: "New",
+    description:
+      "Drop squishy jelly balls, merge matching pairs, chain huge combos, unlock powers and skins, and chase the Top 50.",
+    image:
+      "https://tr.rbxcdn.com/180DAY-7aeb7c4342f5d027d3b489f4c60b63a8/768/432/Image/Webp/noFilter",
+    url: "https://www.roblox.com/games/119248750585731/Merge-Squishy-Balls",
+    accent: "#ff5d9e",
+  },
 ];

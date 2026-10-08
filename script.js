@@ -21,7 +21,7 @@
 
   function renderHero() {
     if (!heroCards) return;
-    const picks = [games[6], games[2], games[8], games[1], games[7]].filter(Boolean);
+    const picks = [games[9], games[6], games[2], games[8], games[1]].filter(Boolean);
     heroCards.innerHTML = picks
       .map(
         (game, index) => `
