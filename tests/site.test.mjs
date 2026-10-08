@@ -28,13 +28,13 @@ test("the signal strip uses two identical sequences for a seamless loop", () => 
   assert.match(styles, /translate3d\(-50%, 0, 0\)/);
 });
 
-test("all nine games and direct Roblox URLs are present", () => {
+test("all ten games and direct Roblox URLs are present", () => {
   const titleCount = (gamesScript.match(/title:/g) || []).length;
   const robloxCount = (gamesScript.match(/https:\/\/www\.roblox\.com\/games\//g) || []).length;
-  assert.equal(titleCount, 9);
-  assert.equal(robloxCount, 9);
-  assert.equal(games.length, 9);
-  assert.equal(new Set(games.map((game) => game.id)).size, 9);
+  assert.equal(titleCount, 10);
+  assert.equal(robloxCount, 10);
+  assert.equal(games.length, 10);
+  assert.equal(new Set(games.map((game) => game.id)).size, 10);
   for (const game of games) {
     assert.match(game.url, /^https:\/\/www\.roblox\.com\/games\//);
     assert.match(game.image, /^https:\/\/tr\.rbxcdn\.com\//);
@@ -42,6 +42,13 @@ test("all nine games and direct Roblox URLs are present", () => {
     assert.ok(game.description);
     assert.ok(game.category);
   }
+
+  const newest = games.at(-1);
+  assert.equal(newest.title, "Merge Squishy Balls [ASMR]");
+  assert.equal(
+    newest.url,
+    "https://www.roblox.com/games/119248750585731/Merge-Squishy-Balls",
+  );
 });
 
 test("responsive and reduced-motion styles are defined", () => {
@@ -54,7 +61,9 @@ test("studio and founder identities stay clearly separated", () => {
   assert.match(html, /founder-magzhan\.webp/);
   assert.match(html, /https:\/\/www\.instagram\.com\/thisismagzhan\//);
   assert.match(html, /https:\/\/t\.me\/OneManArmySnappy/);
+  assert.match(html, /https:\/\/www\.linkedin\.com\/in\/%D0%BC%D0%B0%D2%93%D0%B6%D0%B0%D0%BD-%D2%9B%D1%8B%D0%B4%D1%8B%D1%80%D0%B1%D0%B5%D0%BA-404b042b2\//);
   assert.match(html, /https:\/\/www\.instagram\.com\/frontlinegamesofficial\//);
+  assert.match(html, /https:\/\/www\.tiktok\.com\/@frontlinegames/);
   assert.match(html, /https:\/\/t\.me\/frontlinegamesofficial/);
   assert.match(html, /https:\/\/x\.com\/FrontLineGamesR/);
 
