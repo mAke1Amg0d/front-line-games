@@ -176,11 +176,10 @@ export const games = [
     "description": "Train your power, unlock explosive abilities, and send buildings crashing down. Fly, rebirth, and climb the global leaderboards.",
     "title": "+1 Fart Destruction",
     "status": "New",
-    "image": "assets/games/fart-destruction.webp",
+    "image": "assets/games/fart-destruction-thumbnail.webp",
     "url": "https://www.roblox.com/games/86796403587009/1-Fart-Destruction",
-    "imageWidth": 512,
-    "imageHeight": 512,
-    "imageKind": "icon",
-    "artworkPending": true
+    "imageWidth": 768,
+    "imageHeight": 432,
+    "imageKind": "thumbnail"
   }
 ];

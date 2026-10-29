@@ -151,11 +151,12 @@
       "universeId": 10773345907,
       "robloxTitle": "+1 Fart Destruction",
       "creator": "Front Line Games.",
-      "source": "https://tr.rbxcdn.com/180DAY-88edbd4c22e4a1b7ef17bb94d78ebde1/512/512/GameIcon8/Webp/noFilter",
-      "image": "assets/games/fart-destruction.webp",
-      "width": 512,
-      "height": 512,
-      "kind": "icon"
+      "source": "https://tr.rbxcdn.com/180DAY-152e35b180cd945c6aac453d13e2f11e/768/432/Image/Webp/noFilter",
+      "image": "assets/games/fart-destruction-thumbnail.webp",
+      "width": 768,
+      "height": 432,
+      "kind": "thumbnail",
+      "verifiedAt": "2026-10-29T13:27:32.946Z"
     }
   ]
 }
